@@ -1,60 +1,79 @@
-# FactoryFlow Android Releases
+# FactoryFlow Android App
 
-This repository distributes signed Android APKs for FactoryFlow through **GitHub Releases**.
-It does not contain the Flutter source code, signing keys, keystores, passwords, or APK binaries in Git history.
+FactoryFlow for Android is distributed through the **GitHub Releases** section of this repository.
 
-## Publish a release
+## Download FactoryFlow
 
-1. In the FactoryFlow Flutter project, increase the app version in `pubspec.yaml`:
+To download the latest version:
 
-   ```yaml
-   version: 1.0.1+2
-   ```
+1. Open the **Releases** section of this repository.
+2. Open the latest available release.
+3. Download the APK file named similar to:
+   `factoryflow-vX.X.X.apk`
+4. Open the downloaded APK file.
+5. If Android asks for permission, allow your browser or file manager to **Install unknown apps**.
+6. Tap **Install**.
 
-   `1.0.1` is the user-visible version. `2` is Android's internal version code and must be greater than every previously published release.
+> It is recommended to always use the latest available version of FactoryFlow.
 
-2. Build the signed production APK:
+## Updating FactoryFlow
 
-   ```powershell
-   flutter build apk --release
-   ```
+FactoryFlow may notify you when a newer version is available.
 
-3. Open [Releases](../../releases) and choose **Draft a new release**.
+To update the app:
 
-4. Create a new tag matching the visible version, for example `v1.0.1`.
+1. Download the latest APK from the **Releases** section.
+2. Open the downloaded APK.
+3. Install it over your existing FactoryFlow installation.
 
-5. Use the release title `FactoryFlow 1.0.1`, attach the APK as `factoryflow-v1.0.1.apk`, and add concise release notes.
+Your existing app installation and data should normally remain available after an update. Keeping important data synced or backed up is still recommended, because apparently trusting electronics completely remains a popular human hobby.
 
-6. Publish the release, then copy the asset's direct URL. It should have this shape:
+## Required Updates
 
-   ```text
-   https://github.com/Zain1098/factoryflow_app_release_version/releases/download/v1.0.1/factoryflow-v1.0.1.apk
-   ```
+Some FactoryFlow releases may be marked as **required updates**.
 
-7. In the private FactoryFlow Platform Control Center, open **Mobile app releases** and publish the same version metadata:
+If your installed version is no longer supported, FactoryFlow may require you to install the latest version before you can continue using the app.
 
-   - Version name: `1.0.1`
-   - Version code: `2`
-   - Minimum supported version code: `1` for an optional update, or `2` to require this release
-   - GitHub Release APK HTTPS URL: the copied asset URL
-   - Release notes, mandatory-update flag, and optionally the APK SHA-256 checksum
+Follow the update notification and install the latest APK from this repository.
 
-The mobile app reads this metadata after sign-in and from Settings. It prompts for optional updates and blocks versions below the minimum supported code until the user installs the new APK.
+## Android Installation Warning
 
-## Release rules
+FactoryFlow is distributed directly as an APK instead of through the Google Play Store.
 
-- Keep this repository public if the app must download APKs without GitHub authentication.
-- Never commit APKs, `.jks`/`.keystore` files, `key.properties`, passwords, or Flutter source here.
-- Test the download and installation on a physical Android device before publishing release metadata in the dashboard.
-- Android requires the user's confirmation to install an APK; the app cannot silently update itself.
-- Do not delete or replace a published APK asset. Publish a new tag and a higher version code instead.
+Because of this, Android may display a security confirmation before installation.
 
-## Suggested release notes
+Only download FactoryFlow APK files from the official **GitHub Releases** section of this repository.
 
-```markdown
-## What's new
-- Brief user-facing change
+Do not install modified APKs or files downloaded from unofficial third-party websites.
 
-## Required action
-- Optional update / Update required before continuing
-```
+## Release Information
+
+Each FactoryFlow release may include:
+
+* Version number
+* Release date
+* New features
+* Bug fixes
+* Performance improvements
+* Important changes
+* Information about whether the update is optional or required
+
+Each new version is published as a separate release.
+
+## Compatibility
+
+FactoryFlow is designed for supported Android devices.
+
+Using the latest version is recommended to ensure compatibility with the FactoryFlow platform and to receive the latest fixes and improvements.
+
+## Security
+
+Official FactoryFlow Android APKs are distributed through the **GitHub Releases** section of this repository.
+
+For security, always verify that you are downloading FactoryFlow from the official repository before installing the application.
+
+---
+
+**FactoryFlow**
+
+Factory production, inspection, material flow, inventory, and dispatch management.
