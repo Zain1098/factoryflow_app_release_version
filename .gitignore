@@ -1,0 +1,10 @@
+# This repository contains release instructions only. Publish APKs as GitHub
+# Release assets, not as tracked repository files.
+*.apk
+*.aab
+*.jks
+*.keystore
+key.properties
+*.p12
+*.pem
+*.mobileprovision
